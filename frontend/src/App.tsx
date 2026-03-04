@@ -25,9 +25,9 @@ function App() {
     setLoading(true)
     setError(null)
 
-    fetch('/items', {
-      headers: { Authorization: `Bearer ${token}` },
-    })
+    fetch(`${import.meta.env.VITE_API_URL}/items`, {
+  headers: { Authorization: `Bearer ${token}` },
+	})
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         return res.json()

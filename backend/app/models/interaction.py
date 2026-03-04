@@ -28,6 +28,7 @@ class InteractionLogCreate(SQLModel):
     item_id: int
     kind: str
 
+
 class InteractionModel(SQLModel):
     """Response schema for an interaction."""
 
